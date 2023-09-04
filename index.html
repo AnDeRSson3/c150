@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:lightblue">
+    
+    <a-camera position="-18 8 2"></a-camera>
+
+    <!-------------------------------------------Asset Management------------------------------------------->
+    <a-assets>      
+
+      <a-asset-item id="train-obj" src="./Surprising Hango-Densor/tinker.obj"></a-asset-item>
+      <a-asset-item id="train-mtl" src="./Surprising Hango-Densor/obj.mtl"></a-asset-item>
+    </a-assets>
+    
+    
+    
+  
+    <!--Add code here-->
+    <a-entity obj-model="obj:#train-obj; mtl:#train-mtl" postion="5 0 0" rotation="-90 0 0" scale="0.1 .1 .1"></a-entity>
+
+    
+    
+    <a-circle id="floor" position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive: true" visible="true"
+    color="green">
+  </a-circle>
+  
+    
+  
+   
+    <a-entity >
+        <a-box color="black" position="4 0 1" width="150" height=".1"></a-box>
+        <a-box color="black" position="4 0 3" width="150" height=".1"></a-box>
+        
+    </a-entity>
+    
+  </a-scene>
+</body>
+
+</html>
